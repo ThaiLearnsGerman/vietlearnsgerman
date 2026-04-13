@@ -124,22 +124,12 @@
     .cta-bar p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; max-width: 440px; margin-left: auto; margin-right: auto; }
 
     /* FOOTER */
-    .footer { border-top: 1px solid var(--border); padding: 46px 0 24px; }
-    .footer-grid { display:grid; grid-template-columns: 1.3fr .8fr .9fr; gap: 24px; margin-bottom: 26px; }
-    .footer-brand { display:flex; align-items:center; gap: 12px; font-family: var(--font-display); font-weight:700; margin-bottom: 12px; }
-    .footer-brand .mark { background: linear-gradient(135deg, var(--accent), #34d399); color: var(--bg); width: 34px; height: 34px; border-radius: 10px; display:flex; align-items:center; justify-content:center; font-size: .72rem; font-weight: 800; }
-    .footer p { color: var(--text-secondary); font-size: .86rem; }
-    .footer-title { font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 12px; }
-    .footer-links { list-style:none; display:grid; gap: 10px; }
-    .footer-links a { color: var(--text-secondary); font-size: .86rem; transition: color .2s; }
-    .footer-links a:hover { color: var(--accent); }
-    .footer-note { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
-    .footer-bottom { border-top: 1px solid var(--border); padding-top: 18px; display:flex; justify-content:space-between; gap: 12px; flex-wrap:wrap; color: var(--text-muted); font-size: .78rem; }
+    .footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; font-size: 0.78rem; color: var(--text-muted); }
 
     .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    @media (max-width: 900px) { .pricing-grid, .process-grid, .footer-grid { grid-template-columns: 1fr; } .compare-table { font-size: 0.8rem; } }
+    @media (max-width: 900px) { .pricing-grid, .process-grid { grid-template-columns: 1fr; } .compare-table { font-size: 0.8rem; } }
     @media (max-width: 600px) { .nav-links { display: none; } .nav-toggle { display: flex; } }
     .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 14px; }
   </style>
@@ -147,15 +137,14 @@
 <body>
 
   <!-- NAV -->
-    <nav class="nav">
+  <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand"><span class="mark">VLG</span> VietLearnsGerman</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Trang chủ</a></li>
         <li><a href="warum-deutschland.html">Tại sao Đức?</a></li>
         <li><a href="kurse.html" class="active">Khóa học</a></li>
         <li><a href="index.html#about">Về tôi</a></li>
-        <li><a href="#pricing" class="nav-cta">Bắt đầu ngay</a></li>
+        <li><a href="#pricing" class="nav-cta">Bắt đầu miễn phí</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -175,25 +164,25 @@
       <div class="pricing-grid">
 
         <!-- FREE -->
-        <div class="pricing-card fade-up" id="starter">
+        <div class="pricing-card fade-up">
           <span class="pricing-badge free">Miễn phí</span>
           <h3>Bộ khởi đầu</h3>
-          <p class="desc">Bước đầu tiên hoàn hảo. Tải PDF, tham gia nhóm Telegram, và bắt đầu ngay.</p>
+          <p class="desc">Bước đầu tiên hoàn hảo. Tải PDF, tham gia nhóm Zalo, và bắt đầu ngay.</p>
           <div class="pricing-price">
             <span class="amount green">Miễn phí</span>
           </div>
           <ul class="pricing-features">
             <li>PDF: 50 câu tiếng Đức quan trọng nhất</li>
             <li>Hướng dẫn phát âm cơ bản</li>
-            <li>Tham gia nhóm Telegram</li>
-            <li>Mỗi ngày 1 từ mới qua Telegram</li>
+            <li>Tham gia nhóm Zalo</li>
+            <li>Mỗi ngày 1 từ mới qua Zalo</li>
             <li>Video TikTok miễn phí</li>
           </ul>
-          <a href="#process" class="btn btn-accent">Bắt đầu với bộ miễn phí</a>
+          <a href="50-cau-tieng-duc.pdf" class="btn btn-accent" download>Tải ngay miễn phí</a>
         </div>
 
         <!-- MINI COURSE -->
-        <div class="pricing-card featured fade-up" id="mini-course">
+        <div class="pricing-card featured fade-up">
           <span class="pricing-badge pop">Phổ biến nhất</span>
           <h3>Tuần đầu tiên học tiếng Đức</h3>
           <p class="desc">7 video bài giảng đưa bạn từ con số 0 đến những câu giao tiếp đầu tiên.</p>
@@ -210,11 +199,11 @@
             <li>Hỏi đường, gọi món, chào hỏi</li>
             <li>Bài tập thực hành kèm đáp án</li>
           </ul>
-          <a href="#compare" class="btn btn-blue">Xem gói học phổ biến</a>
+          <a href="#" class="btn btn-blue">Mua khóa học — 199.000đ</a>
         </div>
 
         <!-- 1:1 TUTORING -->
-        <div class="pricing-card fade-up" id="trial">
+        <div class="pricing-card fade-up">
           <span class="pricing-badge pro">Premium</span>
           <h3>Học riêng 1:1 với người bản ngữ</h3>
           <p class="desc">Học trực tiếp qua Zoom. Lộ trình cá nhân. Tập trung vào giao tiếp thực tế.</p>
@@ -231,7 +220,7 @@
             <li>Buổi đầu tiên hoàn toàn miễn phí</li>
             <li>Gói 5 buổi: 1.200.000đ (tiết kiệm 250k)</li>
           </ul>
-          <a href="index.html#about" class="btn btn-ghost" style="border-color:rgba(251,191,36,0.3);color:var(--gold);">Xem giáo viên trước</a>
+          <a href="#" class="btn btn-ghost" style="border-color:rgba(251,191,36,0.3);color:var(--gold);">Đặt lịch học thử miễn phí</a>
         </div>
 
       </div>
@@ -239,7 +228,7 @@
   </section>
 
   <!-- COMPARISON -->
-  <section class="section" id="compare">
+  <section class="section">
     <div class="container">
       <div class="section-tag fade-up">So sánh</div>
       <h2 class="section-title fade-up">VietLearnsGerman vs. các lựa chọn khác</h2>
@@ -291,7 +280,7 @@
               <td><span class="check">✓</span></td>
             </tr>
             <tr>
-              <td>Hỗ trợ Telegram/nhóm</td>
+              <td>Hỗ trợ Zalo/nhóm</td>
               <td><span class="cross">✗</span></td>
               <td><span class="cross">✗</span></td>
               <td><span class="cross">✗</span></td>
@@ -304,7 +293,7 @@
   </section>
 
   <!-- PROCESS -->
-  <section class="section" id="process">
+  <section class="section">
     <div class="container">
       <div class="section-tag fade-up">Cách bắt đầu</div>
       <h2 class="section-title fade-up">3 bước đơn giản</h2>
@@ -316,7 +305,7 @@
         </div>
         <div class="process-card">
           <div class="process-num">02</div>
-          <h4>Tham gia Telegram</h4>
+          <h4>Tham gia Zalo</h4>
           <p>Mỗi ngày nhận 1 từ mới, luyện tập cùng cộng đồng, và đặt câu hỏi bất cứ lúc nào.</p>
         </div>
         <div class="process-card">
@@ -332,42 +321,17 @@
   <section class="section">
     <div class="container">
       <div class="cta-bar fade-up">
-        <h2>Sẵn sàng chọn lộ trình của bạn?</h2>
-        <p>Bạn có thể bắt đầu miễn phí, xem lý do nên sang Đức, rồi quay lại đây để chọn gói học phù hợp.</p>
-        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-          <a href="#starter" class="btn btn-accent" style="width:auto;padding:14px 36px;">Bắt đầu miễn phí</a>
-          <a href="warum-deutschland.html" class="btn btn-ghost" style="width:auto;padding:14px 36px;border:1.5px solid var(--border-hover);">Xem tại sao Đức</a>
-        </div>
+        <h2>Sẵn sàng bắt đầu chưa?</h2>
+        <p>Bước đầu tiên luôn là bước khó nhất. Nhưng 50 câu tiếng Đức miễn phí có thể thay đổi mọi thứ.</p>
+        <a href="50-cau-tieng-duc.pdf" class="btn btn-accent" style="width:auto;padding:14px 36px;" download>Tải miễn phí ngay</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand"><span class="mark">VLG</span> VietLearnsGerman</div>
-          <p>Các khóa học trong website này được nối trực tiếp với trang chủ và trang “Tại sao Đức?” để người học luôn biết bước tiếp theo.</p>
-        </div>
-        <div>
-          <div class="footer-title">Đi nhanh</div>
-          <ul class="footer-links">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="warum-deutschland.html">Tại sao Đức?</a></li>
-            <li><a href="#pricing">Các gói học</a></li>
-            <li><a href="#process">3 bước bắt đầu</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-title">Gợi ý</div>
-          <div class="footer-note">Nếu bạn còn chưa chắc, hãy mở trang “Tại sao Đức?” trước. Nếu đã sẵn sàng, bắt đầu với bộ miễn phí ở ngay trang này.</div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 VietLearnsGerman</span>
-        <span>Connected pages • One learning flow</span>
-      </div>
+      <p>© 2026 VietLearnsGerman — Được xây dựng với tâm huyết dành cho người Việt Nam 🇻🇳🇩🇪</p>
     </div>
   </footer>
 
