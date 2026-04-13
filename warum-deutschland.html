@@ -106,17 +106,7 @@
     .btn-accent:hover { box-shadow: 0 4px 24px var(--accent-glow); transform: translateY(-2px); }
 
     /* FOOTER */
-    .footer { border-top: 1px solid var(--border); padding: 46px 0 24px; }
-    .footer-grid { display:grid; grid-template-columns: 1.3fr .8fr .9fr; gap: 24px; margin-bottom: 26px; }
-    .footer-brand { display:flex; align-items:center; gap: 12px; font-family: var(--font-display); font-weight:700; margin-bottom: 12px; }
-    .footer-brand .mark { background: linear-gradient(135deg, var(--accent), #34d399); color: var(--bg); width: 34px; height: 34px; border-radius: 10px; display:flex; align-items:center; justify-content:center; font-size: .72rem; font-weight: 800; }
-    .footer p { color: var(--text-secondary); font-size: .86rem; }
-    .footer-title { font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 12px; }
-    .footer-links { list-style:none; display:grid; gap: 10px; }
-    .footer-links a { color: var(--text-secondary); font-size: .86rem; transition: color .2s; }
-    .footer-links a:hover { color: var(--accent); }
-    .footer-note { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
-    .footer-bottom { border-top: 1px solid var(--border); padding-top: 18px; display:flex; justify-content:space-between; gap: 12px; flex-wrap:wrap; color: var(--text-muted); font-size: .78rem; }
+    .footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; font-size: 0.78rem; color: var(--text-muted); }
 
     /* ANIMATIONS */
     .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
@@ -126,12 +116,12 @@
     @media (max-width: 900px) {
       .salary-grid { grid-template-columns: 1fr; gap: 12px; }
       .salary-vs { display: none; }
-      .jobs-grid, .footer-grid { grid-template-columns: 1fr 1fr; }
+      .jobs-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 600px) {
       .nav-links { display: none; }
       .nav-toggle { display: flex; }
-      .jobs-grid, .footer-grid { grid-template-columns: 1fr; }
+      .jobs-grid { grid-template-columns: 1fr; }
     }
     .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 14px; }
   </style>
@@ -139,15 +129,14 @@
 <body>
 
   <!-- NAV -->
-    <nav class="nav">
+  <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand"><span class="mark">VLG</span> VietLearnsGerman</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Trang chủ</a></li>
         <li><a href="warum-deutschland.html" class="active">Tại sao Đức?</a></li>
         <li><a href="kurse.html">Khóa học</a></li>
         <li><a href="index.html#about">Về tôi</a></li>
-        <li><a href="kurse.html#pricing" class="nav-cta">Bắt đầu ngay</a></li>
+        <li><a href="kurse.html" class="nav-cta">Bắt đầu miễn phí</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -304,42 +293,17 @@
   <section class="section">
     <div class="container">
       <div class="cta-bar fade-up">
-        <h2>Bạn đã thấy cơ hội — giờ đến bước học</h2>
-        <p>Trang này cho bạn lý do. Trang khóa học cho bạn bước đi cụ thể. Hãy đi tiếp theo đúng flow của website.</p>
-        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-          <a href="kurse.html" class="btn btn-accent">Xem khóa học →</a>
-          <a href="index.html" class="btn btn-ghost" style="border:1.5px solid var(--border-hover);">Quay về trang chủ</a>
-        </div>
+        <h2>Bước đầu tiên: học tiếng Đức</h2>
+        <p>Mọi con đường đến Đức đều bắt đầu bằng tiếng Đức. Bắt đầu miễn phí ngay hôm nay.</p>
+        <a href="kurse.html" class="btn btn-accent">Xem khóa học →</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand"><span class="mark">VLG</span> VietLearnsGerman</div>
-          <p>Trang “Tại sao Đức?” là phần giải thích cơ hội. Từ đây người dùng có thể quay về trang chủ hoặc đi tiếp sang khóa học mà không bị lạc.</p>
-        </div>
-        <div>
-          <div class="footer-title">Đi nhanh</div>
-          <ul class="footer-links">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="kurse.html">Khóa học</a></li>
-            <li><a href="index.html#why">Tóm tắt cơ hội</a></li>
-            <li><a href="index.html#about">Về giáo viên</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-title">Flow</div>
-          <div class="footer-note">Home → Why Germany → Courses. Đây là flow rõ nhất để người dùng hiểu, tin tưởng và bắt đầu.</div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 VietLearnsGerman</span>
-        <span>One clear route from Vietnam to Germany</span>
-      </div>
+      <p>© 2026 VietLearnsGerman — Được xây dựng với tâm huyết dành cho người Việt Nam 🇻🇳🇩🇪</p>
     </div>
   </footer>
 
