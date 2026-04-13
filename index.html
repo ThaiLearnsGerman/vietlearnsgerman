@@ -83,42 +83,6 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--accent); }
-    .nav-links a.active { color: var(--accent); }
-
-    /* ══════ WEBSITE MAP ══════ */
-    .site-map-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .site-map-card {
-      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg);
-      padding: 26px; transition: transform .22s, border-color .22s, box-shadow .22s;
-    }
-    .site-map-card:hover { transform: translateY(-4px); border-color: var(--border-hover); box-shadow: 0 12px 32px rgba(0,0,0,.18); }
-    .site-map-top { display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px; }
-    .site-map-icon { width: 46px; height: 46px; border-radius: 14px; display:flex; align-items:center; justify-content:center; font-size: 1.25rem; }
-    .site-map-icon.green { background: var(--accent-dim); }
-    .site-map-icon.blue { background: var(--blue-dim); }
-    .site-map-icon.gold { background: var(--gold-dim); }
-    .site-map-label { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); font-weight: 700; }
-    .site-map-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-    .site-map-card p { color: var(--text-secondary); font-size: .88rem; margin-bottom: 18px; }
-    .site-map-link { color: var(--accent); font-weight: 600; font-size: .9rem; }
-
-    /* ══════ FOOTER ══════ */
-    .footer { border-top: 1px solid var(--border); padding: 46px 0 24px; }
-    .footer-grid { display:grid; grid-template-columns: 1.3fr .8fr .9fr; gap: 24px; margin-bottom: 26px; }
-    .footer-brand { display:flex; align-items:center; gap: 12px; font-family: var(--font-display); font-weight:700; margin-bottom: 12px; }
-    .footer-brand .mark {
-      background: linear-gradient(135deg, var(--accent), #34d399); color: var(--bg);
-      width: 34px; height: 34px; border-radius: 10px; display:flex; align-items:center; justify-content:center;
-      font-size: .72rem; font-weight: 800;
-    }
-    .footer p { color: var(--text-secondary); font-size: .86rem; }
-    .footer-title { font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 12px; }
-    .footer-links { list-style:none; display:grid; gap: 10px; }
-    .footer-links a { color: var(--text-secondary); font-size: .86rem; transition: color .2s; }
-    .footer-links a:hover { color: var(--accent); }
-    .footer-note { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
-    .footer-bottom { border-top: 1px solid var(--border); padding-top: 18px; display:flex; justify-content:space-between; gap: 12px; flex-wrap:wrap; color: var(--text-muted); font-size: .78rem; }
-
     .nav-cta {
       background: var(--accent); color: var(--bg) !important;
       padding: 7px 18px; border-radius: var(--radius-pill);
@@ -373,17 +337,21 @@
 <body>
 
   <!-- NAV -->
-    <nav class="nav">
+  <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand"><span class="mark">VLG</span> VietLearnsGerman</a>
+      <a href="#" class="nav-brand">
+        <span class="mark">VLG</span>
+        VietLearnsGerman
+      </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">Trang chủ</a></li>
-        <li><a href="warum-deutschland.html">Tại sao Đức?</a></li>
-        <li><a href="kurse.html">Khóa học</a></li>
+        <li><a href="#why">Tại sao Đức?</a></li>
+        <li><a href="#offer">Khóa học</a></li>
         <li><a href="#about">Về tôi</a></li>
-        <li><a href="kurse.html#pricing" class="nav-cta">Bắt đầu ngay</a></li>
+        <li><a href="#offer" class="nav-cta">Bắt đầu miễn phí</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -403,8 +371,8 @@
             Học với người bản ngữ, rẻ hơn Goethe 5 lần.
           </p>
           <div class="hero-actions">
-            <a href="kurse.html" class="btn btn-accent">Xem khóa học ↓</a>
-            <a href="kurse.html#pricing" class="btn btn-ghost">Đặt lịch học thử</a>
+            <a href="50-cau-tieng-duc.pdf" class="btn btn-accent" download>Tải miễn phí 50 câu quan trọng nhất ↓</a>
+            <a href="#offer" class="btn btn-ghost">Đặt lịch học thử</a>
           </div>
         </div>
 
@@ -444,47 +412,6 @@
     </div>
   </section>
 
-
-  <!-- WEBSITE MAP -->
-  <section class="section" id="explore">
-    <div class="container">
-      <div class="section-header fade-up">
-        <div class="section-tag">Khám phá website</div>
-        <h2 class="section-title">Mọi thứ đều nối với nhau</h2>
-        <p class="section-desc">Trang chủ là trung tâm. Từ đây bạn có thể đi tới lý do chọn Đức, khóa học và phần giới thiệu giáo viên.</p>
-      </div>
-      <div class="site-map-grid">
-        <a class="site-map-card fade-up" href="index.html#why">
-          <div class="site-map-top">
-            <div class="site-map-icon green">🏠</div>
-            <span class="site-map-label">Trang chủ</span>
-          </div>
-          <h3>Xem tổng quan nhanh</h3>
-          <p>Hiểu mô hình, xem con số chính và chọn bước tiếp theo phù hợp với bạn.</p>
-          <span class="site-map-link">Ở lại trang chủ →</span>
-        </a>
-        <a class="site-map-card fade-up" href="warum-deutschland.html">
-          <div class="site-map-top">
-            <div class="site-map-icon blue">🇩🇪</div>
-            <span class="site-map-label">Cơ hội</span>
-          </div>
-          <h3>Tại sao Đức?</h3>
-          <p>Xem lương, ngành nghề đang tuyển và lộ trình thực tế từ Việt Nam sang Đức.</p>
-          <span class="site-map-link">Mở trang chi tiết →</span>
-        </a>
-        <a class="site-map-card fade-up" href="kurse.html">
-          <div class="site-map-top">
-            <div class="site-map-icon gold">📚</div>
-            <span class="site-map-label">Khóa học</span>
-          </div>
-          <h3>Chọn cách học</h3>
-          <p>Từ bộ miễn phí đến học 1:1 — tất cả đều nằm trong cùng một hệ thống học rõ ràng.</p>
-          <span class="site-map-link">Xem khóa học →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- WARUM DEUTSCHLAND -->
   <section class="section" id="why">
     <div class="container">
@@ -492,7 +419,6 @@
         <div class="section-tag">Tại sao nước Đức?</div>
         <h2 class="section-title">Nước Đức đang chờ bạn</h2>
         <p class="section-desc">Đức thiếu lao động trầm trọng. Người Việt là một trong những nguồn nhân lực được đánh giá cao nhất.</p>
-        <div style="margin-top:18px;"><a href="warum-deutschland.html" class="btn btn-ghost" style="display:inline-flex;">Xem trang chi tiết →</a></div>
       </div>
       <div class="why-grid">
         <div class="why-card fade-up">
@@ -521,7 +447,6 @@
         <div class="section-tag">Bắt đầu từ đây</div>
         <h2 class="section-title">Chọn cách học phù hợp với bạn</h2>
       </div>
-      <div style="display:flex;justify-content:center;margin-bottom:20px;"><a href="kurse.html" class="btn btn-ghost" style="width:auto;">Mở trang khóa học đầy đủ →</a></div>
       <div class="offer-grid">
 
         <div class="offer-card free fade-up">
@@ -536,7 +461,7 @@
             <li>10 câu cho giao tiếp xã hội</li>
             <li>Kèm hướng dẫn phát âm</li>
           </ul>
-          <a href="kurse.html#pricing" class="btn btn-accent" style="width:100%;justify-content:center;">Xem bộ miễn phí</a>
+          <a href="50-cau-tieng-duc.pdf" class="btn btn-accent" style="width:100%;justify-content:center;" download>Tải ngay miễn phí</a>
         </div>
 
         <div class="offer-card paid fade-up">
@@ -551,7 +476,7 @@
             <li>Rẻ hơn Goethe-Institut 5 lần</li>
             <li>Buổi đầu tiên miễn phí</li>
           </ul>
-          <a href="kurse.html#process" class="btn btn-ghost" style="width:100%;justify-content:center;border-color:rgba(56,189,248,0.3);color:var(--blue);">Xem cách bắt đầu</a>
+          <a href="#" class="btn btn-ghost" style="width:100%;justify-content:center;border-color:rgba(56,189,248,0.3);color:var(--blue);">Đặt lịch học thử miễn phí</a>
         </div>
 
       </div>
@@ -593,7 +518,7 @@
     <div class="container fade-up">
       <h2>Sẵn sàng bắt đầu chưa?</h2>
       <p>Bước đầu tiên luôn là bước khó nhất. Nhưng bạn chỉ cần một bước để bắt đầu.</p>
-      <a href="kurse.html" class="btn btn-accent" style="font-size:1.05rem;padding:16px 36px;">Xem khóa học ↓</a>
+      <a href="50-cau-tieng-duc.pdf" class="btn btn-accent" style="font-size:1.05rem;padding:16px 36px;" download>Tải miễn phí 50 câu tiếng Đức ↓</a>
       <div class="cta-quote">
         "Nước Đức không đóng cửa với bạn.<br>
         Chỉ có tiếng Đức là bức tường duy nhất. Hãy phá nó."
@@ -602,31 +527,9 @@
   </section>
 
   <!-- FOOTER -->
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand"><span class="mark">VLG</span> VietLearnsGerman</div>
-          <p>Một website nhỏ nhưng rõ ràng: giúp người Việt học tiếng Đức để sống, học nghề và làm việc tại Đức.</p>
-        </div>
-        <div>
-          <div class="footer-title">Đi nhanh</div>
-          <ul class="footer-links">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="warum-deutschland.html">Tại sao Đức?</a></li>
-            <li><a href="kurse.html">Khóa học</a></li>
-            <li><a href="index.html#about">Về giáo viên</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-title">Bước tiếp theo</div>
-          <div class="footer-note">Bắt đầu từ trang chủ, đọc lý do chọn Đức, rồi mở khóa học để đi tiếp theo đúng thứ tự.</div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 VietLearnsGerman</span>
-        <span>Vietnam → Germany • One connected website</span>
-      </div>
+      <p>© 2026 VietLearnsGerman — Được xây dựng với tâm huyết dành cho người Việt Nam 🇻🇳🇩🇪</p>
     </div>
   </footer>
 
