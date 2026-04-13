@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tại sao nước Đức? — VietLearnsGerman</title>
+  <meta name="description" content="Tại sao người Việt nên cân nhắc làm việc tại Đức? Lương cao, học nghề miễn phí, visa hỗ trợ. Tất cả thông tin bạn cần." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0e17; --bg-card: #111827; --surface: #1e293b;
+      --border: rgba(255,255,255,0.06); --border-hover: rgba(255,255,255,0.12);
+      --text: #f1f5f9; --text-secondary: #94a3b8; --text-muted: #64748b;
+      --accent: #06d6a0; --accent-dim: rgba(6,214,160,0.12); --accent-glow: rgba(6,214,160,0.25);
+      --blue: #38bdf8; --blue-dim: rgba(56,189,248,0.1);
+      --coral: #ff6b6b; --coral-dim: rgba(255,107,107,0.1);
+      --gold: #fbbf24; --gold-dim: rgba(251,191,36,0.1);
+      --purple: #a78bfa; --purple-dim: rgba(167,139,250,0.1);
+      --font-vn: 'Be Vietnam Pro', sans-serif;
+      --font-display: 'Space Grotesk', sans-serif;
+      --radius: 12px; --radius-lg: 20px; --radius-pill: 100px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-vn); background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* NAV — same as index */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,14,23,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+    .nav-brand .mark { background: linear-gradient(135deg, var(--accent), #34d399); color: var(--bg); font-size: 0.7rem; font-weight: 800; width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a.active { color: var(--accent); }
+    .nav-cta { background: var(--accent); color: var(--bg) !important; padding: 7px 18px; border-radius: var(--radius-pill); font-weight: 600; font-size: 0.82rem !important; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; width: 32px; height: 32px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+    .nav-toggle span { width: 20px; height: 2px; background: var(--text); border-radius: 2px; }
+
+    /* HERO */
+    .page-hero { padding: 130px 0 60px; text-align: center; position: relative; }
+    .page-hero::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 700px; height: 500px; background: radial-gradient(circle, var(--blue-dim) 0%, transparent 60%); pointer-events: none; }
+    .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 14px; }
+    .page-hero h1 .hl { background: linear-gradient(135deg, var(--accent), var(--blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-hero p { font-size: 1.05rem; color: var(--text-secondary); max-width: 560px; margin: 0 auto; }
+
+    /* SECTIONS */
+    .section { padding: 70px 0; }
+    .section-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px; }
+    .section-title { font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 700; margin-bottom: 12px; }
+    .section-desc { font-size: 0.92rem; color: var(--text-secondary); max-width: 560px; }
+
+    /* SALARY COMPARISON */
+    .salary-grid { display: grid; grid-template-columns: 1fr 80px 1fr; gap: 20px; align-items: center; margin-top: 40px; }
+    .salary-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px 28px; text-align: center; }
+    .salary-card .flag { font-size: 2.4rem; margin-bottom: 12px; }
+    .salary-card .country { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; font-weight: 500; }
+    .salary-card .amount { font-family: var(--font-display); font-size: 2rem; font-weight: 700; }
+    .salary-card .amount.vn { color: var(--coral); }
+    .salary-card .amount.de { color: var(--accent); }
+    .salary-card .note { font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; }
+    .salary-vs { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--text-muted); text-align: center; }
+
+    /* TIMELINE */
+    .timeline { max-width: 640px; margin: 40px auto 0; }
+    .timeline-item { display: grid; grid-template-columns: 60px 1fr; gap: 16px; padding-bottom: 32px; position: relative; }
+    .timeline-item:not(:last-child)::after { content: ''; position: absolute; left: 29px; top: 52px; bottom: 0; width: 2px; background: var(--border); }
+    .timeline-dot { width: 60px; height: 60px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; position: relative; z-index: 1; }
+    .timeline-dot.step1 { background: var(--accent-dim); }
+    .timeline-dot.step2 { background: var(--blue-dim); }
+    .timeline-dot.step3 { background: var(--gold-dim); }
+    .timeline-dot.step4 { background: var(--purple-dim); }
+    .timeline-dot.step5 { background: var(--coral-dim); }
+    .timeline-content h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+    .timeline-content p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+    .timeline-content .duration { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; font-weight: 500; }
+
+    /* JOBS GRID */
+    .jobs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 36px; }
+    .job-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 18px; text-align: center; transition: border-color 0.2s; }
+    .job-card:hover { border-color: var(--border-hover); }
+    .job-card .icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .job-card h4 { font-size: 0.88rem; font-weight: 600; margin-bottom: 4px; }
+    .job-card .salary { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--accent); }
+    .job-card .salary-sub { font-size: 0.72rem; color: var(--text-muted); }
+
+    /* FAQ */
+    .faq-list { max-width: 680px; margin: 36px auto 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { padding: 18px 0; font-weight: 600; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-q::after { content: '+'; font-family: var(--font-display); font-size: 1.2rem; color: var(--text-muted); transition: transform 0.2s; }
+    .faq-q.open::after { transform: rotate(45deg); color: var(--accent); }
+    .faq-a { display: none; padding: 0 0 18px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
+    .faq-a.open { display: block; }
+
+    /* CTA */
+    .cta-bar { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; text-align: center; margin-top: 20px; }
+    .cta-bar h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+    .cta-bar p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-vn); font-size: 0.95rem; font-weight: 600; padding: 14px 28px; border-radius: var(--radius-pill); border: none; cursor: pointer; transition: all 0.2s; }
+    .btn-accent { background: linear-gradient(135deg, var(--accent), #34d399); color: var(--bg); }
+    .btn-accent:hover { box-shadow: 0 4px 24px var(--accent-glow); transform: translateY(-2px); }
+
+    /* FOOTER */
+    .footer { border-top: 1px solid var(--border); padding: 46px 0 24px; }
+    .footer-grid { display:grid; grid-template-columns: 1.3fr .8fr .9fr; gap: 24px; margin-bottom: 26px; }
+    .footer-brand { display:flex; align-items:center; gap: 12px; font-family: var(--font-display); font-weight:700; margin-bottom: 12px; }
+    .footer-brand .mark { background: linear-gradient(135deg, var(--accent), #34d399); color: var(--bg); width: 34px; height: 34px; border-radius: 10px; display:flex; align-items:center; justify-content:center; font-size: .72rem; font-weight: 800; }
+    .footer p { color: var(--text-secondary); font-size: .86rem; }
+    .footer-title { font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 12px; }
+    .footer-links { list-style:none; display:grid; gap: 10px; }
+    .footer-links a { color: var(--text-secondary); font-size: .86rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-note { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 18px; display:flex; justify-content:space-between; gap: 12px; flex-wrap:wrap; color: var(--text-muted); font-size: .78rem; }
+
+    /* ANIMATIONS */
+    .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .salary-grid { grid-template-columns: 1fr; gap: 12px; }
+      .salary-vs { display: none; }
+      .jobs-grid, .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .jobs-grid, .footer-grid { grid-template-columns: 1fr; }
+    }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 14px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+    <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><span class="mark">VLG</span> VietLearnsGerman</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="warum-deutschland.html" class="active">Tại sao Đức?</a></li>
+        <li><a href="kurse.html">Khóa học</a></li>
+        <li><a href="index.html#about">Về tôi</a></li>
+        <li><a href="kurse.html#pricing" class="nav-cta">Bắt đầu ngay</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Tại sao <span class="hl">nước Đức?</span></h1>
+      <p>Đức đang thiếu hàng trăm ngàn lao động. Người Việt Nam là một trong những nguồn nhân lực được đánh giá cao nhất. Đây là cơ hội thực sự.</p>
+    </div>
+  </section>
+
+  <!-- SALARY COMPARISON -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag fade-up">So sánh thu nhập</div>
+      <h2 class="section-title fade-up">Mức lương thay đổi cuộc sống</h2>
+      <div class="salary-grid fade-up">
+        <div class="salary-card">
+          <div class="flag">🇻🇳</div>
+          <div class="country">Điều dưỡng tại Việt Nam</div>
+          <div class="amount vn">~8 triệu đ</div>
+          <div class="note">khoảng €300 / tháng</div>
+        </div>
+        <div class="salary-vs">→</div>
+        <div class="salary-card">
+          <div class="flag">🇩🇪</div>
+          <div class="country">Điều dưỡng tại Đức</div>
+          <div class="amount de">€2.800-3.500</div>
+          <div class="note">khoảng 70-90 triệu đ / tháng</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOBS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag fade-up">Ngành nghề đang tuyển</div>
+      <h2 class="section-title fade-up">Đức đang cần người trong các ngành này</h2>
+      <p class="section-desc fade-up">Đây là các ngành có nhu cầu tuyển dụng cao nhất tại Đức — và mức lương khởi điểm.</p>
+      <div class="jobs-grid fade-up">
+        <div class="job-card">
+          <div class="icon">🏥</div>
+          <h4>Điều dưỡng</h4>
+          <div class="salary">€2.800-3.500</div>
+          <div class="salary-sub">Thiếu 50.000 người</div>
+        </div>
+        <div class="job-card">
+          <div class="icon">💻</div>
+          <h4>Công nghệ IT</h4>
+          <div class="salary">€3.500-5.000</div>
+          <div class="salary-sub">Nhu cầu cực cao</div>
+        </div>
+        <div class="job-card">
+          <div class="icon">🍳</div>
+          <h4>Nhà hàng / Khách sạn</h4>
+          <div class="salary">€2.200-2.800</div>
+          <div class="salary-sub">Luôn thiếu nhân sự</div>
+        </div>
+        <div class="job-card">
+          <div class="icon">🔧</div>
+          <h4>Kỹ thuật / Cơ khí</h4>
+          <div class="salary">€3.000-4.000</div>
+          <div class="salary-sub">69.400 vị trí trống</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUSBILDUNG TIMELINE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag fade-up">Lộ trình</div>
+      <h2 class="section-title fade-up">Từ Việt Nam đến Đức — 5 bước</h2>
+      <p class="section-desc fade-up">Đây là con đường rõ ràng nhất để đến Đức hợp pháp và bắt đầu cuộc sống mới.</p>
+      <div class="timeline fade-up">
+        <div class="timeline-item">
+          <div class="timeline-dot step1">📖</div>
+          <div class="timeline-content">
+            <h3>Bước 1: Học tiếng Đức đến B1</h3>
+            <p>Đây là yêu cầu bắt buộc. Bạn cần đạt chứng chỉ B1 (TELC, Goethe, hoặc ÖSD) để xin visa.</p>
+            <div class="duration">⏱ 9-12 tháng</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot step2">📋</div>
+          <div class="timeline-content">
+            <h3>Bước 2: Tìm chương trình Ausbildung hoặc việc làm</h3>
+            <p>Đăng ký qua các chương trình chính thức như "Hand in Hand", AHK, hoặc qua công ty tuyển dụng uy tín.</p>
+            <div class="duration">⏱ 1-3 tháng</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot step3">🛂</div>
+          <div class="timeline-content">
+            <h3>Bước 3: Xin visa tại Đại sứ quán Đức</h3>
+            <p>Với chứng chỉ B1 và hợp đồng Ausbildung, bạn nộp hồ sơ xin visa làm việc hoặc học nghề.</p>
+            <div class="duration">⏱ 2-4 tháng</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot step4">✈️</div>
+          <div class="timeline-content">
+            <h3>Bước 4: Đến Đức và bắt đầu</h3>
+            <p>Ausbildung = vừa học vừa làm, được trả lương €800-1.200/tháng trong thời gian đào tạo.</p>
+            <div class="duration">⏱ 2-3 năm đào tạo</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot step5">🏠</div>
+          <div class="timeline-content">
+            <h3>Bước 5: Làm việc chính thức tại Đức</h3>
+            <p>Sau khi hoàn thành Ausbildung, bạn có thể làm việc toàn thời gian với mức lương đầy đủ và phúc lợi.</p>
+            <div class="duration">💰 €2.500-3.500 / tháng</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag fade-up" style="text-align:center;">Câu hỏi thường gặp</div>
+      <h2 class="section-title fade-up" style="text-align:center;">Những điều bạn muốn biết</h2>
+      <div class="faq-list fade-up">
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Ausbildung là gì?</div>
+          <div class="faq-a">Ausbildung là chương trình đào tạo nghề tại Đức, kéo dài 2-3 năm. Bạn vừa học vừa làm tại công ty, được trả lương trong suốt quá trình đào tạo, và không phải đóng học phí. Sau khi hoàn thành, bạn nhận bằng nghề được công nhận trên toàn châu Âu.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Tôi cần trình độ tiếng Đức nào?</div>
+          <div class="faq-a">Hầu hết các chương trình yêu cầu chứng chỉ B1 (trung cấp). Một số ngành như điều dưỡng có thể yêu cầu B2. Chứng chỉ được công nhận: TELC, Goethe-Zertifikat, ÖSD.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Chi phí đi Đức là bao nhiêu?</div>
+          <div class="faq-a">Chi phí chính là học tiếng Đức (30-70 triệu VND cho lộ trình A0→B1 tại trung tâm). Ngoài ra có phí visa, vé máy bay, và chi phí ban đầu. Nhiều chương trình chính thức hỗ trợ miễn phí tiếng Đức và visa.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Tôi có cần bằng đại học không?</div>
+          <div class="faq-a">Không nhất thiết. Chương trình Ausbildung dành cho cả những người chưa có bằng đại học. Bạn cần bằng tốt nghiệp trung học phổ thông và chứng chỉ tiếng Đức.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Tại sao học tiếng Đức với VietLearnsGerman?</div>
+          <div class="faq-a">Vì chúng tôi cung cấp giáo viên bản ngữ Đức thực sự, dạy 1:1 qua Zoom, với mức giá rẻ hơn Goethe-Institut 5 lần. Chúng tôi tập trung vào giao tiếp thực tế — những gì bạn thực sự cần khi sống và làm việc tại Đức.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-bar fade-up">
+        <h2>Bạn đã thấy cơ hội — giờ đến bước học</h2>
+        <p>Trang này cho bạn lý do. Trang khóa học cho bạn bước đi cụ thể. Hãy đi tiếp theo đúng flow của website.</p>
+        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+          <a href="kurse.html" class="btn btn-accent">Xem khóa học →</a>
+          <a href="index.html" class="btn btn-ghost" style="border:1.5px solid var(--border-hover);">Quay về trang chủ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="mark">VLG</span> VietLearnsGerman</div>
+          <p>Trang “Tại sao Đức?” là phần giải thích cơ hội. Từ đây người dùng có thể quay về trang chủ hoặc đi tiếp sang khóa học mà không bị lạc.</p>
+        </div>
+        <div>
+          <div class="footer-title">Đi nhanh</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="kurse.html">Khóa học</a></li>
+            <li><a href="index.html#why">Tóm tắt cơ hội</a></li>
+            <li><a href="index.html#about">Về giáo viên</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-title">Flow</div>
+          <div class="footer-note">Home → Why Germany → Courses. Đây là flow rõ nhất để người dùng hiểu, tin tưởng và bắt đầu.</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 VietLearnsGerman</span>
+        <span>One clear route from Vietnam to Germany</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', () => { document.getElementById('navLinks').classList.toggle('open'); });
+    const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
